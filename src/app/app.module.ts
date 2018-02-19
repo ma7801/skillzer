@@ -6,15 +6,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { MainMenu } from '../pages/main-menu/main-menu';
-import { SkillOptions } from '../pages/skill-options/skill-options';
-import { Skill } from '../pages/skill/skill';
+import { TwoNumberSkill } from '../pages/two-number-skill/two-number-skill';
+import { SkillPage } from '../pages/skill-page/skill-page';
 
 @NgModule({
   declarations: [
     MyApp,
     MainMenu,
-    SkillOptions,
-    Skill
+    TwoNumberSkill,
+    SkillPage
   ],
   imports: [
     BrowserModule,
@@ -24,8 +24,8 @@ import { Skill } from '../pages/skill/skill';
   entryComponents: [
     MyApp,
     MainMenu,
-    SkillOptions,
-    Skill
+    TwoNumberSkill,
+    SkillPage
   ],
   providers: [
     StatusBar,
