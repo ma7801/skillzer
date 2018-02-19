@@ -8,6 +8,6 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-button block *ngFor = "let item of menuItems">{{item}}</button>
+    <button ion-button block *ngFor = "let skill of skills" (click)='openPage(component)'>{{skill.title}}</button>
   </ion-list>
 </ion-content>

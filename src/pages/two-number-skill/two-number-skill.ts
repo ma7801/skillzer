@@ -2,13 +2,17 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'skill',
-  templateUrl: 'skill.html'
+  selector: 'two-number-skill',
+  template: 'Hey there'
 })
-export class Skill {
+export class TwoNumberSkill {
+  
 
   constructor(public navCtrl: NavController) {
+    
 
   }
+
+  
 
 }

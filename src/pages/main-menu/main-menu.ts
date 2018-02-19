@@ -1,16 +1,27 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+//import { MyApp } from '../../app/app.component';
+
 @Component({
   selector: 'main-menu',
   templateUrl: 'main-menu.html'
 })
 export class MainMenu {
-  menuItems = [];
+
+  skills: any[] = [
+    {title: "Multiplication Table Practice", component: "TwoNumberSkill", operation:"multiply", numberType:"natural"},
+    {title: "Combining +/- Numbers", component: "TwoNumberSkill", operation:"combine", numberType:"integer"},
+    {title: "Dividing Practice", component:"TwoNumberSkill", operation: "divide", numberType:"natural"}
+
+  ];
 
   constructor(public navCtrl: NavController) {
-    this.menuItems = ['Menu Item 1', 'Menu Item 2'];
 
+  }
+
+  openPage(p) {
+    this.navCtrl.push(p);
   }
 
 }
