@@ -4,11 +4,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MainMenu } from '../pages/main-menu/main-menu';
+import { TwoNumberSkill } from '../pages/two-number-skill/two-number-skill';
+import { SkillOptions } from '../pages/skill-options/skill-options';
+
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   rootPage:any = MainMenu;
+  
   
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -17,7 +22,12 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+
+  
+
   }
+
+
 
  
 }

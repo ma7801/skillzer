@@ -7,7 +7,10 @@
 </ion-header>
 
 <ion-content padding>
-  <p>
-    The skill content will go here!
-  </p>
+  <ion-card *ngFor="let card of cards">
+    <ion-card-header>Stars will go here.</ion-card-header>
+    <ion-card-content>
+      {{card.expression}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

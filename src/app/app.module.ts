@@ -13,7 +13,8 @@ import { SkillPage } from '../pages/skill-page/skill-page';
   declarations: [
     MyApp,
     MainMenu,
-    //TwoNumberSkill,
+    TwoNumberSkill,
+    SkillPage
   ],
   imports: [
     BrowserModule,

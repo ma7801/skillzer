@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Skill Options
+      </ion-title>
+    </ion-navbar>
+</ion-header>
+  
+<ion-content padding>
+    <ion-list no-lines>  
+        <ion-item>
+            <ion-range min="1" max="10" snaps="true" [(ngModel)]="difficulty">
+                <ion-label range-left>1</ion-label>
+                <ion-label range-right>10</ion-label>
+            </ion-range>
+        </ion-item>
+        <ion-item >
+                <ion-label>Difficulty</ion-label>
+                <ion-badge item-end>{{difficulty}}</ion-badge>
+        </ion-item>
+    </ion-list>
+    <button ion-button block (click)='startSkill()'>Let's Go!</button>
+</ion-content>
+  
