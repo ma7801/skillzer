@@ -13,12 +13,20 @@ export class SkillPage {
   difficulty: number;
   cards: Array<any>;
 
+  curCardNum: number;
+  userAnswer: number;
+
+  //debug:
+  keyupTriggered: number;
+
   constructor(public navCtrl: NavController, private navParams: NavParams) {
     this.operation = navParams.get('operation');
     this.numberType = navParams.get('numberType');
     this.difficulty = navParams.get('difficulty');
 
     this.cards = [];
+    this.curCardNum = 0;
+    this.keyupTriggered = 0; //debug
     this.initializeCards();
   }
 
@@ -45,6 +53,15 @@ export class SkillPage {
         answer = firstNum * secondNum;
         this.cards.push({expression, answer});
       }
+    }
+  }
+
+  checkAnswer() {
+    this.keyupTriggered++; //debug
+
+    if (this.userAnswer == this.cards[this.curCardNum].answer) {
+      this.curCardNum++;
+      this.userAnswer = NaN;
     }
   }
 

@@ -7,10 +7,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let card of cards">
-    <ion-card-header>Stars will go here.</ion-card-header>
-    <ion-card-content>
-      {{card.expression}}
-    </ion-card-content>
-  </ion-card>
+  <h1>{{cards[curCardNum].expression}}</h1>
+  <ion-input type="number" placeholder="answer" [(ngModel)]="userAnswer" (keyup)="checkAnswer()"></ion-input>
+  <p>userAnswer:{{userAnswer}}</p>
+  <p>keyup triggered {{keyupTriggered}} times</p>
+
 </ion-content>
