@@ -6,10 +6,22 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h1>{{cards[curCardNum].expression}}</h1>
-  <ion-input type="number" placeholder="answer" [(ngModel)]="userAnswer" (keyup)="checkAnswer()"></ion-input>
-  <p>userAnswer:{{userAnswer}}</p>
-  <p>keyup triggered {{keyupTriggered}} times</p>
-
+<ion-content padding style="text-align:center">
+  <ion-grid>
+    <ion-row> 
+        <span *ngFor="let star of stars"><ion-icon ios="ios-star" md="md-star"></ion-icon></span>
+    </ion-row>
+    <ion-row justify-content-center>
+      <h1>{{cards[curCardNum].expression}}</h1>
+    </ion-row>
+    <ion-row>
+      <ion-col col-5></ion-col>
+      <ion-col>
+        <ion-input autofocus type="number" placeholder="answer" [(ngModel)]="userAnswer" (keyup)="checkAnswer()"></ion-input>
+      </ion-col>
+      <ion-col col-5></ion-col>
+    </ion-row>
+    <p>userAnswer:{{userAnswer}}</p>
+    <p>keyup triggered {{keyupTriggered}} times</p>
+  </ion-grid>  
 </ion-content>

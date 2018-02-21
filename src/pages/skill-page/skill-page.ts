@@ -12,6 +12,7 @@ export class SkillPage {
   numberType: String;
   difficulty: number;
   cards: Array<any>;
+  stars: Array<any>;
 
   curCardNum: number;
   userAnswer: number;
@@ -28,6 +29,12 @@ export class SkillPage {
     this.curCardNum = 0;
     this.keyupTriggered = 0; //debug
     this.initializeCards();
+
+    // Fill the stars array based on the difficulty level
+    for (let i=0; i<this.difficulty; i++) {
+      this.stars[i] = "star" + i;
+    }
+
   }
 
   initializeCards() {
