@@ -1,12 +1,18 @@
-Stars on each card
-- # stars = difficulty ?
-- stars dissapear one per second?
+End of skill --> "nice job" page
+Local database (SQLite) for star data
+Stats page (how many stars earned, skills needing work, etc.)
 
-Get rid of number "spinner" on answer input
+
+
+
+Reset timer from card to card (see https://stackoverflow.com/questions/8126466/javascript-reset-setinterval-back-to-0) for
+ idea on this
 
 
 
 Later:
+Fix no scrolling issue
+Upload data to website database
 Teacher lock/unlock: teacher can lock/unlock per student so that students can just do in class
 Social Media login (including SnapChat)
 Vary the notation for multiplication randomly (dot vs. parentheses)
@@ -17,3 +23,8 @@ Change difficulty calculation so that it gives problems that are only difficult,
 Placement Test
 - would probably need to be required, and based on result would only allow students to start at a certain level of difficulty
 
+Done:
+
+Stars on each card
+- # stars = difficulty ?
+- stars dissapear one per second?

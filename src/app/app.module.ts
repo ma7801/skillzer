@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { MainMenu } from '../pages/main-menu/main-menu';
 import { TwoNumberSkill } from '../pages/two-number-skill/two-number-skill';
 import { SkillPage } from '../pages/skill-page/skill-page';
+import { AppSettings } from './app-settings'
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SkillPage } from '../pages/skill-page/skill-page';
   providers: [
     StatusBar,
     SplashScreen,
+    AppSettings,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

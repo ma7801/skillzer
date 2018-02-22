@@ -1,18 +1,61 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Skill
-    </ion-title>
-  </ion-navbar>
+
 </ion-header>
 
-<ion-content padding style="text-align:center">
-  <ion-grid>
+<ion-content padding>
+<!--<ion-grid>
+<ion-row>
+<ion-col col-5></ion-col>
+<ion-col>-->
+<ion-list no-lines>
+  <ion-item text-center>
+    <ion-icon *ngFor="let star of stars" [style.font-size.px]="appSettings.starWidth" 
+    color="starcolor" ios="{{star.curIosStar}}" md="{{star.curMdStar}}" id='{{star.id}}'></ion-icon>
+  </ion-item>
+  <ion-item text-center>
+    <span [ngStyle]="{'background-color':'green', 'height':'20px'}" [style.width.px]="countdownBarWidth"></span>    
+  </ion-item>
+  <ion-item text-center>
+    <h1>{{cards[curCardNum].expression}}</h1>
+  </ion-item>
+  <ion-item text-center>
+    <ion-input [style]="{'text-align':'center'}" autofocus type="number" placeholder="answer" [(ngModel)]="userAnswer" (keyup)="checkAnswer()"></ion-input>
+  </ion-item>
+  <ion-item text-center>
+    <h2>Stars earned: {{starsEarned}}</h2>
+  </ion-item>
+</ion-list>
+
+<!--</ion-col>
+<ion-col col-5></ion-col>
+</ion-row>
+</ion-grid>-->
+
+<!--
+
+  <ion-grid text-center>
     <ion-row> 
-        <span *ngFor="let star of stars"><ion-icon ios="ios-star" md="md-star"></ion-icon></span>
+      <ion-col col-5></ion-col>
+        <ion-list>
+        <ion-item>
+        <ion-icon *ngFor="let star of stars" [style.font-size.px]="appSettings.starWidth" 
+          color="starcolor" ios="ios-star" md="md-star"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <div [ngStyle]="{'background-color':'green', 'height':'20px'}" [style.width.px]="countdownBarWidth"></div>
+        </ion-item>
+        </ion-list>
+      <ion-col col-5></ion-col>
     </ion-row>
-    <ion-row justify-content-center>
-      <h1>{{cards[curCardNum].expression}}</h1>
+    <ion-row>
+        <ion-col col-5></ion-col>
+        <ion-col>
+        <ion-col col-5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-5></ion-col>
+        <h1>{{cards[curCardNum].expression}}</h1>
+      <ion-col col-5></ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-5></ion-col>
@@ -23,5 +66,6 @@
     </ion-row>
     <p>userAnswer:{{userAnswer}}</p>
     <p>keyup triggered {{keyupTriggered}} times</p>
-  </ion-grid>  
+  </ion-grid>-->  
 </ion-content>
+
